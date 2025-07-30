@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="gallery-header">
+            <h1>Image Gallery</h1>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="city">City</button>
+                <button class="filter-btn" data-filter="people">People</button>
+                <button class="filter-btn" data-filter="abstract">Abstract</button>
+            </div>
+        </header>
+
+        <div class="gallery-grid" id="gallery">
+            <div class="gallery-item" data-category="nature">
+                <img src="mountain-scape.jpg" alt="Mountain Landscape" loading="lazy">
+                <div class="overlay">
+                    <h3>Mountain Vista</h3>
+                    <p>Breathtaking mountain landscape</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="city">
+                <img src="city-skyline.jpg" alt="City Skyline" loading="lazy">
+                <div class="overlay">
+                    <h3>City Lights</h3>
+                    <p>Urban skyline at twilight</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="forest.jpeg" alt="Forest Scene" loading="lazy">
+                <div class="overlay">
+                    <h3>Forest Path</h3>
+                    <p>Peaceful woodland scene</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="people">
+                <img src="portrait.jpeg" alt="Portrait" loading="lazy">
+                <div class="overlay">
+                    <h3>Portrait</h3>
+                    <p>Candid moment captured</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="abstract">
+                <img src="abstract-art.jpg" alt="Abstract Art" loading="lazy">
+                <div class="overlay">
+                    <h3>Abstract Flow</h3>
+                    <p>Vibrant color composition</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="city">
+                <img src="street.jpg" alt="Street View" loading="lazy">
+                <div class="overlay">
+                    <h3>Urban Life</h3>
+                    <p>City street photography</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="ocean-waves.jpeg" alt="Ocean Waves" loading="lazy">
+                <div class="overlay">
+                    <h3>Ocean Waves</h3>
+                    <p>Coastal serenity</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="abstract">
+                <img src="geometric.jpeg" alt="Geometric Art" loading="lazy">
+                <div class="overlay">
+                    <h3>Geometric</h3>
+                    <p>Modern abstract design</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="people">
+                <img src="friends.jpg" alt="Friends" loading="lazy">
+                <div class="overlay">
+                    <h3>Friendship</h3>
+                    <p>Joyful moments together</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <button class="nav-btn prev-btn" id="prevBtn">&#8249;</button>
+            <img class="lightbox-img" id="lightboxImg" src="/placeholder.svg" alt="">
+            <button class="nav-btn next-btn" id="nextBtn">&#8250;</button>
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
